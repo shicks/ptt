@@ -1,0 +1,17 @@
+{
+  "name": "ptt",
+  "version": "1.0.0",
+  "description": "Pokemon Teaches Typing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/spritesmith": "^3.4.5",
+    "bun": "^1.1.13",
+    "spritesmith": "^3.4.1"
+  }
+}
