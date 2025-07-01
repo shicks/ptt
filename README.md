@@ -15,15 +15,14 @@ Pokemon Teaches Typing (PTT) is a client-side web application designed to help c
 *   **Capture Progress:** Successfully completing a typing challenge contributes to capturing that Pokemon species. Multiple successful encounters with the same Pokemon species might be required for a permanent capture.
 *   **Pokedex:** A Pokedex will display all permanently captured Pokemon, showcasing the player's progress.
 *   **Benefits for Captured Pokemon (Potential):**
-    *   Slightly easier capture challenges for already-caught Pokemon.
-    *   Bonus points or in-game currency.
+    *   Gallery view.
     *   Cosmetic unlocks (e.g., different backgrounds, player avatar items).
 *   **Levels/Difficulty:** The game will feature progressing difficulty levels, introducing longer words, shorter time limits, and more complex typing challenges.
 
 ## Technology Stack (Proposed)
 
 *   **Frontend Framework:** Preact (chosen for its small size and React-like API, ideal for a client-side game where performance and load times are important).
-*   **Build Tool:** Vite (for fast development server and optimized builds).
+*   **Build Tool:** Vite (for fast development server and optimized builds) and TypeScript (for type checking).
 *   **Styling:** CSS Modules or a lightweight CSS-in-JS solution (e.g., `otion` or `goober`) to keep styling encapsulated and maintainable.
 *   **State Management:** Preact's built-in `useState` and `useReducer` should suffice for initial complexity. If needed, a lightweight global state manager like Zustand could be considered later.
 *   **Graphics/Assets:** Existing Pokemon sprites and background images.
