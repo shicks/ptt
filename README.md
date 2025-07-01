@@ -72,7 +72,7 @@ This list outlines the tasks needed to build the game. Tasks prefixed with "(Use
     *   `src/gameLogic/` for core game mechanics.
     *   `src/styles/` for global styles and variables.
     *   `src/App.tsx` as the main application component.
-5.  (User Task) Configure GitHub repository settings for GitHub Pages deployment (e.g., select source branch/folder).
+5.  **(DONE)** Configure GitHub repository settings for GitHub Pages deployment from the root of the `gh-pages` branch.
 6.  Implement basic GitHub Actions workflow for automated build and deployment to GitHub Pages.
 
 ### Phase 1: Core Gameplay - Single Letter Mode
