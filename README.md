@@ -21,9 +21,11 @@ Pokemon Teaches Typing (PTT) is a client-side web application designed to help c
 
 ## Technology Stack (Proposed)
 
-*   **Frontend Framework:** Preact (chosen for its small size and React-like API, ideal for a client-side game where performance and load times are important).
-*   **Build Tool:** Vite (for fast development server and optimized builds) and TypeScript (for type checking).
-*   **Styling:** CSS Modules or a lightweight CSS-in-JS solution (e.g., `otion` or `goober`) to keep styling encapsulated and maintainable.
+*   **Frontend Framework:** Preact with TypeScript (using TSX for components).
+*   **Build Tool:** Vite (for fast development server and optimized builds).
+*   **Type Checking:** TypeScript.
+*   **Linting:** ESLint configured for Preact and TypeScript.
+*   **Styling:** Plain CSS (via `style.css`, can be evolved to CSS Modules or other solutions later).
 *   **State Management:** Preact's built-in `useState` and `useReducer` should suffice for initial complexity. If needed, a lightweight global state manager like Zustand could be considered later.
 *   **Graphics/Assets:** Existing Pokemon sprites and background images.
 
@@ -64,16 +66,19 @@ This list outlines the tasks needed to build the game. Tasks prefixed with "(Use
 ### Phase 0: Project Setup & Basic Structure
 
 1.  **(DONE)** Create `README.md` (this file).
-2.  Initialize project with Vite and Preact (e.g., `npm create vite@latest ptt -- --template preact-ts`).
-3.  Set up ESLint and Prettier for code quality.
-4.  Create basic file structure:
-    *   `src/components/` for Preact components.
-    *   `src/assets/` for images, sprites (already partially populated).
-    *   `src/gameLogic/` for core game mechanics.
-    *   `src/styles/` for global styles and variables.
-    *   `src/App.tsx` as the main application component.
+2.  **(DONE)** Initialize project with Vite, Preact, and TypeScript. (Manual setup, files are now `.tsx`)
+3.  **(DONE)** Set up ESLint for code quality with TypeScript and Preact support. (Prettier can be added later if desired).
+4.  **(DONE)** Create basic file structure:
+    *   `src/components/` for Preact components (e.g., `Header.tsx`).
+    *   `src/pages/` for page components (e.g., `HomePage.tsx`).
+    *   `src/assets/` for images, sprites.
+    *   `src/` contains `main.tsx` (main application entry point) and `style.css`.
+    *   `public/` for static assets (Vite convention, though `index.html` is at root).
+    *   `vite.config.js` for Vite configuration.
+    *   `.eslintrc.cjs` for ESLint configuration.
+    *   `tsconfig.json` for TypeScript configuration.
 5.  **(DONE)** Configure GitHub repository settings for GitHub Pages deployment from the root of the `gh-pages` branch.
-6.  Implement basic GitHub Actions workflow for automated build and deployment to GitHub Pages.
+6.  **(DONE)** Implement basic GitHub Actions workflow for automated build and deployment to GitHub Pages (in `.github/workflows/deploy.yml`).
 
 ### Phase 1: Core Gameplay - Single Letter Mode
 
