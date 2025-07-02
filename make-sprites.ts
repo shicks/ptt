@@ -6,7 +6,7 @@ import * as Spritesmith from 'spritesmith';
 Spritesmith.run({
   src: fs.readdirSync('sprites').map(s => `sprites/${s}`),
   algorithm: 'binary-tree'
-}, function handleResult (err, result) {
+}, (err, result) => {
   // If there was an error, throw it
   if (err) {
     throw err;

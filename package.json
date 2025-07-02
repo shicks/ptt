@@ -4,14 +4,33 @@
   "description": "Pokemon Teaches Typing",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "type-check": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.19.4",
     "@types/spritesmith": "^3.4.5",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
     "bun": "^1.1.13",
-    "spritesmith": "^3.4.1"
+    "eslint": "^8.57.1",
+    "eslint-config-preact": "^1.5.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "gh-pages": "^6.3.0",
+    "spritesmith": "^3.4.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@preact/preset-vite": "^2.10.2",
+    "preact": "^10.26.9",
+    "vite": "^7.0.0"
   }
 }

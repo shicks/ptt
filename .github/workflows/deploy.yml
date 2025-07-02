@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build # This will run 'vite build'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Vite's output directory
+          publish_branch: gh-pages # Deploy to the gh-pages branch
+          # Optional: cname: your-custom-domain.com
+          # Optional: user_name: 'Your Name'
+          # Optional: user_email: 'your.email@example.com'
+          # Optional: commit_message: 'Deploy to GitHub Pages'
+          # Optional: keep_files: true # To keep existing files on gh-pages branch
